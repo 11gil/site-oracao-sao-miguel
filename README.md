@@ -1,6 +1,6 @@
 # 🙏 Oração do Glorioso São Miguel Arcanjo
 
-![Imagem do Glorioso São Miguel Arcanjo](./img/sao-miguel.png)
+<img src="./img/sao-miguel.png" alt="Imagem do Glorioso São Miguel Arcanjo" width="200">
 
 ## 📖 Sobre o Projeto
 Este site foi desenvolvido para divulgar a **Oração do Glorioso São Miguel Arcanjo** e ajudar os fiéis a incluí-la em sua rotina diária.  
@@ -8,7 +8,6 @@ Ele também serviu como prática para aprimorar minhas habilidades em **HTML, CS
 
 ## 🎯 Funcionalidades
 ✔ Carregamento dinâmico de conteúdo via **JavaScript**  
-✔ Modo **Escuro/Claro** para melhor leitura  
 ✔ Oração **completa e reduzida**, além de explicações detalhadas  
 ✔ **Layout responsivo**, adaptado para celulares e computadores  
 ✔ Botão para **copiar a oração** rapidamente  
