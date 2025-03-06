@@ -1,0 +1,354 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsividade: Ajustar menu para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+/* Modo Escuro
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+    */
+
+.dark-mode header {
+    background: #333;
+}
+
+/* Estilização do menu principal */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    background: #0056b3;
+
+    /* list-style: none;
+    display: flex;
+    gap: 15px; 
+    padding: 10px; */
+    margin-top: 10px;
+
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 0;
+
+}
+
+.menu li {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px
+
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Exibir o submenu quando o mouse passa */
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Cabeçalho */ 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0056b3;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Ajuste do container do título e imagem */
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.header-image {
+    width: 50px;
+    height: auto;
+    /* margin-right: 15px;
+    width: 50px;
+    height: auto;*/
+} 
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+
+
+/*Reset básico 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+ Responsividade 
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+
+ Modo Escuro 
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode header {
+    background: #333;
+}
+
+ Menu 
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+Estilização do menu principal
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    background: #0056b3;
+    padding: 15px;
+}
+
+
+jjjj
+
+.menu li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu li {
+ position: relative;
+    margin-right: 20px;
+
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+jjjj
+
+.menu li button:hover {
+    text-decoration: underline;
+} 
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+
+    text-decoration: underline;
+
+}
+
+ Estilização do submenu 
+.submenu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+}
+
+.submenu li {
+    text-align: left;
+}
+
+.submenu a {
+    color: #0056b3;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.submenu a:hover {
+    background: #f4f4f4;
+}
+
+ Exibir o submenu quando o mouse passa 
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+body {
+  background-color: #f4f4f4; 
+ color: #333; 
+    line-height: 1.6;
+    text-align: center;
+    font-family: Arial, sans-serif; 
+
+Estilos Gerais
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+
+}
+
+Cabeçalho 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0056b3;
+    padding: 20px;
+    color: white;
+}
+
+.header-image {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+} 
+
+
+header {
+    background: #0056b3;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+*/
