@@ -22,34 +22,96 @@ function carregarOracaoReduzida() {
 }
 
 function copiarOracaoCompleta() {
-    const oracaoTitulo = document.querySelector("#oracao-completa h2").innerText;
+    const oracaoTitulo = document.querySelector("#oracao-completa h2");
     const oracaoTextos = document.querySelectorAll("#oracao-completa p");
-    
-    let textoCompleto = `${oracaoTitulo}\n\n`;
+
+    if (!oracaoTitulo || oracaoTextos.length === 0) {
+        alert("Erro: O conteúdo da oração completa não foi encontrado.");
+        return;
+    }
+
+    let textoCompleto = `${oracaoTitulo.innerText}\n\n`;
     
     oracaoTextos.forEach(paragrafo => {
         textoCompleto += paragrafo.innerText + "\n\n";
     });
-    
-    navigator.clipboard.writeText(textoCompleto)
-        .then(() => alert("Oração completa copiada com sucesso!"))
-        .catch(err => console.error("Erro ao copiar: ", err));
+
+    const textArea = document.createElement("textarea");
+    textArea.value = textoCompleto;
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+        document.execCommand("copy");
+        alert("Oração completa copiada com sucesso!");
+    } catch (err) {
+        console.error("Erro ao copiar: ", err);
+        alert("Não foi possível copiar a oração. Tente manualmente.");
+    }
+
+    document.body.removeChild(textArea);
 }
 
 function copiarOracaoReduzida() {
-    const oracaoTitulo = document.querySelector("#oracao-reduzida h2").innerText;
+    const oracaoTitulo = document.querySelector("#oracao-reduzida h2");
     const oracaoTextos = document.querySelectorAll("#oracao-reduzida p");
-    
-    let textoCompleto = `${oracaoTitulo}\n\n`;
+
+    if (!oracaoTitulo || oracaoTextos.length === 0) {
+        alert("Erro: O conteúdo da oração reduzida não foi encontrado.");
+        return;
+    }
+
+    let textoCompleto = `${oracaoTitulo.innerText}\n\n`;
     
     oracaoTextos.forEach(paragrafo => {
         textoCompleto += paragrafo.innerText + "\n\n";
     });
-    
-    navigator.clipboard.writeText(textoCompleto)
-        .then(() => alert("Oração reduzida copiada com sucesso!"))
-        .catch(err => console.error("Erro ao copiar: ", err));
+
+    const textArea = document.createElement("textarea");
+    textArea.value = textoCompleto;
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+        document.execCommand("copy");
+        alert("Oração reduzida copiada com sucesso!");
+    } catch (err) {
+        console.error("Erro ao copiar: ", err);
+        alert("Não foi possível copiar a oração. Tente manualmente.");
+    }
+
+    document.body.removeChild(textArea);
 }
+
+// function copiarOracaoCompleta() {
+//     const oracaoTitulo = document.querySelector("#oracao-completa h2").innerText;
+//     const oracaoTextos = document.querySelectorAll("#oracao-completa p");
+    
+//     let textoCompleto = `${oracaoTitulo}\n\n`;
+    
+//     oracaoTextos.forEach(paragrafo => {
+//         textoCompleto += paragrafo.innerText + "\n\n";
+//     });
+    
+//     navigator.clipboard.writeText(textoCompleto)
+//         .then(() => alert("Oração completa copiada com sucesso!"))
+//         .catch(err => console.error("Erro ao copiar: ", err));
+// }
+
+// function copiarOracaoReduzida() {
+//     const oracaoTitulo = document.querySelector("#oracao-reduzida h2").innerText;
+//     const oracaoTextos = document.querySelectorAll("#oracao-reduzida p");
+    
+//     let textoCompleto = `${oracaoTitulo}\n\n`;
+    
+//     oracaoTextos.forEach(paragrafo => {
+//         textoCompleto += paragrafo.innerText + "\n\n";
+//     });
+    
+//     navigator.clipboard.writeText(textoCompleto)
+//         .then(() => alert("Oração reduzida copiada com sucesso!"))
+//         .catch(err => console.error("Erro ao copiar: ", err));
+// }
 
 document.querySelector('a[href="#historia"]').addEventListener('click', function(event) {
     event.preventDefault(); // Evita o comportamento padrão do link
